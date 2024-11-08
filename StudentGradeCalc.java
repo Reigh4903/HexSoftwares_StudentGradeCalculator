@@ -71,7 +71,7 @@ class Student {
     }
 
     public boolean hasPassed() {
-        return calculateAverage() >= 50; // Assuming 50 is the passing grade
+        return calculateAverage() >= 50; // 50% is the pass mark
     }
 
     // Getter for grades array
@@ -79,7 +79,6 @@ class Student {
         return grades;
     }
 }
-
 
 // Classroom class definition
 class Classroom {
@@ -100,11 +99,13 @@ class Classroom {
         return totalGrades > 0 ? totalSum / totalGrades : 0;
     }
 
-    public void displayAllStudents() {
-        for (Student student : students) {
+    public void displayAllStudents()
+    {
+        for (Student student : students)
+        {
             student.displayGrades();
             System.out.println("Average Grade: " + student.calculateAverage());
-            System.out.println("Pass Status: " + (student.hasPassed() ? "Passed" : "Failed"));
+            System.out.println("Pass Status: " + (student.hasPassed() ? "Class has Passed" : "Class has Failed"));
             System.out.println();
         }
     }
